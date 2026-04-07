@@ -30,5 +30,21 @@ function timer() {
 }
 
 // Salva i dati inseriti dall'utente
+function salvaDatiUtenteHandler(event) {
+    event.preventDefault();
+
+    for (let i = 0; i < inputUtente.length; i++) {
+        numeriUtente.push(parseInt(inputUtente[i].value));
+    }
+    console.log("Numeri inseriti dall'utente:", numeriUtente);
+
+    for (let i = 0; i < numeriUtente.length; i++) {
+        if (numeriGenerati.indexOf(numeriUtente[i]) !== -1) {
+            numeriCorretti.push(numeriUtente[i]);
+        }
+    }
+    numGiusti.innerHTML = `I numeri giusti erano ${numeriCorretti.length}, e sono: ${numeriCorretti}`;
+    console.log("Numeri corretti:", numeriCorretti);
+}
 
 
