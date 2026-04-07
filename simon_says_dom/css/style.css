@@ -1,7 +1,9 @@
 /* Generics */
 
 /* # COUNTDOWN */
-
+* {
+	font-family: "Times New Roman", Times, serif;
+}
 #countdown {
 	font-weight: bolder;
 	font-size: 5rem;
@@ -14,4 +16,9 @@
 
 input {
 	width: 80px !important;
+}
+
+body {
+	background-color: black;
+	color: white;
 }

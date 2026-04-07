@@ -8,7 +8,7 @@ let formUtente = document.querySelector("#answers-form");
 let inputUtente = document.querySelectorAll(".form-control");;
 // Timer
 let countdown = document.querySelector("#countdown");
-let tempoRimasto = 4;
+let tempoRimasto = 3;
 // Messaggio punteggio
 let numGiusti = document.querySelector("#message");
 
@@ -25,8 +25,5 @@ console.log(numeriGenerati);
 timer();
 
 formUtente.addEventListener("submit", salvaDatiUtenteHandler);
-
-numGiusti.innerHTML = `Hai indovinato ${numeriCorretti.length} numeri: ${numeriCorretti.join(", ")}`;
-
 
 

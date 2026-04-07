@@ -39,11 +39,13 @@ function salvaDatiUtenteHandler(event) {
     console.log("Numeri inseriti dall'utente:", numeriUtente);
 
     for (let i = 0; i < numeriUtente.length; i++) {
-        if (numeriGenerati.indexOf(numeriUtente[i]) !== -1) {
+        if (numeriGenerati.indexOf(numeriUtente[i]) !== -1 && numeriCorretti.indexOf(numeriUtente[i]) === -1) {
             numeriCorretti.push(numeriUtente[i]);
         }
+
     }
-    numGiusti.innerHTML = `I numeri giusti erano ${numeriCorretti.length}, e sono: ${numeriCorretti}`;
+    numGiusti.innerHTML = `Hai ricordato ${numeriCorretti.length} numeri ${numeriCorretti}`;
+    numGiusti.classList.remove("d-none");
     console.log("Numeri corretti:", numeriCorretti);
 }
 
